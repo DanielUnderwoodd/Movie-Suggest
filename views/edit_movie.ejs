@@ -1,0 +1,37 @@
+<% extend('layout') %>
+
+<h1><%= title%></h1>
+<form id="form-group" action="/movie/edit/<%=movie._id%>"  method="POST">
+ <label>  Title <input type="text" class="form-control" name="title" value="<%=movie.title %>"></label>
+ <br>
+ <label>  Director <input type="text" class="form-control" name="director"   value="<%=movie.director %>"></label>
+ <br>
+ <label>  about <textarea name="about" class="form-control"> <%=movie.about %> </textarea></label>
+ <br>
+ <label>  genres: </label>
+ <br>
+ <label>  Drama <input type="text" class="form-control" name="drama" value="<%=movie.drama %>"></label>
+ <br>
+ <label>  Romance <input type="text" class="form-control" name="romance" value="<%=movie.romance %>"></label>
+ <br>
+ <label>  Action <input type="text" class="form-control" name="action" value="<%=movie.action %>"></label>
+ <br>
+ <label>  Comedy <input type="text" class="form-control" name="comedy" value="<%=movie.comedy %>"></label>
+ <br>
+ <label> Horror <input type="text" class="form-control" name="horror" value="<%=movie.horror %>"></label>
+ <br>
+ <label>  Crime <input type="text" class="form-control" name="crime" value="<%=movie.crime %>"></label>
+ <br>
+  <label>  Link <input type="text" class="form-control" name="link" value="<%=movie.link %>"></label>
+<br>
+<label>  ID <input type="text" class="form-control" name="id" value="<%=movie.id %>"></label>
+<br>
+<label>  Image <input type="text" class="form-control" name="image" value="<%=movie.image %>"></label>
+<br>
+
+ <input type="submit" class="btn btn-primary" value="Submit">
+
+
+
+ 
+</form>

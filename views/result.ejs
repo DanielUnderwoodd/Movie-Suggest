@@ -1,0 +1,15 @@
+<% extend('layout') %>
+<br>
+<ul class="list-group">
+ 
+  <div class="float-left">
+    <% newsume.forEach(function(new1){ %>
+      <% if (typeof new1 == 'object' && new1) { %>
+    <br>
+    <br>
+    <h1  class="display-4"> <%=new1.title %></h1>
+       <a href="/movie/<%=new1._id %>" >   <img src="/css/<%=new1.image %>.jpg" class="img-fluid" alt="Responsive image">  </a>  
+       <% } %>
+    <% }); %>
+  </div>
+  </ul>

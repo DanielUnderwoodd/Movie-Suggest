@@ -1,0 +1,29 @@
+ 
+ 
+ <% extend('layout') %>
+<br>
+<br>
+
+<h1  class="display-4"><%= title%></h1>
+ 
+ 
+ 
+
+<form class="clear"  method ="POST" action = "/movie/suggest">
+            <label>  genres: </label>
+ <br>
+ <label>  Drama <input type="text" class="form-control" name="drama" ></label>
+ <br>
+ <label>  Romance <input type="text" class="form-control" name="romance" ></label>
+ <br>
+ <label>  Action <input type="text" class="form-control" name="action" ></label>
+ <br>
+ <label>  Comedy <input type="text" class="form-control" name="comedy" ></label>
+ <br>
+ <label> Horror <input type="text" class="form-control" name="horror" ></label>
+ <br>
+ <label>  Crime <input type="text" class="form-control" name="crime" ></label>
+ <br>
+ <input type="submit" class="btn btn-primary" value="Submit">
+          </form>
+ 

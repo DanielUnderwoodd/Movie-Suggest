@@ -1,0 +1,84 @@
+<% extend('layout') %>
+
+
+
+
+
+<div id="<%= movie.id %>"><script type="text/JavaScript" src="<%= movie.link %>"></script></div>
+<div class="jumbotron">
+ 
+
+
+
+
+
+
+
+<h1  class="display-4"><%= movie.title %></h1>
+<h1  class="display-4"> Director </h1>
+<p  class="font-weight-bold"><%= movie.director %></p>
+<h1  class="display-4"> About movie </h1>
+<p  class="font-weight-bold"><%= movie.about %></p>
+<h1  class="display-4"> Drama rate </h1>
+<p  class="font-weight-bold"><%= movie.drama %></p>
+<h1  class="display-4"> Action rate </h1>
+<p  class="font-weight-bold"><%= movie.action %></p>
+<h1  class="display-4"> Comedy rate </h1>
+<p  class="font-weight-bold" ><%= movie.comedy %></p>
+<h1  class="display-4"> Romance rate </h1>
+<p  class="font-weight-bold"><%= movie.romance %></p>
+<h1  class="display-4"> Horror rate </h1>
+<p  class="font-weight-bold"><%= movie.horror %></p>
+<h1  class="display-4"> Crime rate </h1>
+<p  class="font-weight-bold"><%= movie.crime %></p>
+
+
+
+
+<hr>
+
+<% if (typeof user == 'object' && user){ %>
+
+ <% if(user.username === "Admin"){ %>
+
+
+
+<a  class="btn btn-primary" href="/movie/edit/<%= movie._id %>">Edit</a>
+<a  class="btn btn-danger  delete_movie" href="#" data_id=<%=movie._id %>>Delete</a>
+<% } 
+else { %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+</style>
+</head>
+<body>
+
+
+
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+<script>
+function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+}
+</script>
+
+</body>
+</html>
+ <% }  %> <% } %>
+
+</div>

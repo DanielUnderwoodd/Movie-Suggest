@@ -1,0 +1,45 @@
+<% extend('layout') %>
+
+<h1><%= title%></h1>
+<form id="form-group" action="/movie/add"  method="POST">
+ <label>  Title <input type="text" class="form-control" name="title"></label>
+ <br>
+  <label>  Director <input type="text" class="form-control" name="director"></label>
+ <br>
+ <label>  about <textarea name="about" class="form-control"></textarea></label>
+ <br>
+ <br>
+  <label>  genres: </label>
+ <br>
+ <br>
+  <label>  Drama<input type="text" class="form-control" name="drama"></label>
+ <br>
+ <br>
+  <label>  Romance <input type="text" class="form-control" name="romance"></label>
+ <br>
+<br>
+  <label>  Action <input type="text" class="form-control" name="action"></label>
+ <br>
+ <br>
+  <label>  Comedy <input type="text" class="form-control" name="comedy"></label>
+ <br>
+ <br>
+  <label>  Horror <input type="text" class="form-control" name="horror"></label>
+ <br>
+<br>
+  <label>  Crime <input type="text" class="form-control" name="crime"></label>
+ <br>
+  <label>  Link <input type="text" class="form-control" name="link"></label>
+  <br>
+  <label>  ID <input type="text" class="form-control" name="id"></label>
+  <br>
+  <label>  Image <input type="text" class="form-control" name="image"></label>
+  <br>
+
+
+ <input type="submit" class="btn btn-primary" value="Submit">
+
+
+
+ 
+</form>

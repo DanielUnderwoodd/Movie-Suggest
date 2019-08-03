@@ -1,0 +1,94 @@
+
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+     
+      <link rel="stylesheet" href="/style/css/style.css">
+       <link rel="stylesheet" href="/css/style.css">
+    
+      <title> <%= title %></title>
+  
+     
+    
+    </head>
+  
+    <body>
+            <% if (typeof errors == 'object' && errors) {%>
+                <% errors.forEach(function (error) { %>
+                  <div class="alert alert-danger"><%=error.msg%> 
+                  </div>
+                <% }) %>
+                  <% } %>
+                  <%- messages('messages', locals) %>
+  
+      <div class="container">
+        <div class="box"></div>
+        <div class="container-forms">
+          <div class="container-info">
+            <div class="info-item">
+              <div class="table">
+                <div class="table-cell">
+                  <p>
+                    Have an account?
+                  </p>
+                  <div class="btn">
+                    Log in
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="table">
+                <div class="table-cell">
+                  <p>
+                    Don't have an account? 
+                  </p>
+                  <div class="btn">
+                    Sign up
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-form">
+          <form class="clear"  method ="POST" action = "/users/login">
+            <div class="form-item log-in">
+              <div class="table">
+                <div class="table-cell">
+                  <input name="username" placeholder="Username" type="text" /><input name="password" placeholder="Password" type="Password" />
+                  <button class="btn" value = "Submit" name="submit">
+                    Log in
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+            <form  class="clear" method ="POST" action = "/users/register">
+              <div class="form-item sign-up">
+                <div class="table">
+                  <div class="table-cell">
+                    <input name="email" placeholder="Email" type="text" /><input name="full_name" placeholder="Full Name" type="text" /><input name="username" placeholder="Username" type="text" /><input name="password" placeholder="Password" type="Password" /><input name="password2" placeholder="Confirm Password" type="Password" />
+                    <button class="btn" value="Submit" name="submit">Sign up </button>
+                  </div>
+                </div>
+            </div>
+          </form>
+           
+            </div>
+        </div>
+      </div>
+      
+  
+    </body>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    
+        <script src="/style/js/index.js"></script>
+  
+  
+    
+  </html>
+  
